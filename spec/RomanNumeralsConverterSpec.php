@@ -8,8 +8,13 @@ use Prophecy\Argument;
 
 class RomanNumeralsConverterSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_calculates_the_roman_numeral_for_1()
     {
-        $this->shouldHaveType(RomanNumeralsConverter::class);
+        $this->convert(1)->shouldReturn('I');
+    }
+
+    function it_calculates_the_roman_numeral_for_2()
+    {
+        $this->convert(2)->shouldReturn('II');
     }
 }
