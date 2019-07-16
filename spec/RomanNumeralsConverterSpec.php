@@ -17,4 +17,9 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
     {
         $this->convert(2)->shouldReturn('II');
     }
+
+    function it_calculates_the_roman_numeral_for_5()
+    {
+        $this->convert(5)->shouldReturn('V');
+    }
 }
