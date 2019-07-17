@@ -6,6 +6,11 @@ class RomanNumeralsConverter
     {
         $solution = '';
 
+        if ($number >= 10) {
+            $solution .= 'X';
+            $number -= 10;
+        }
+
         if ($number >= 5) {
             $solution .= 'V';
             $number -= 5;

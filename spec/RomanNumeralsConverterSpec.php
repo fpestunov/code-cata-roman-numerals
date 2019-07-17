@@ -27,4 +27,14 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
     {
         $this->convert(6)->shouldReturn('VI');
     }
+
+    function it_calculates_the_roman_numeral_for_10()
+    {
+        $this->convert(10)->shouldReturn('X');
+    }
+
+    function it_calculates_the_roman_numeral_for_11()
+    {
+        $this->convert(11)->shouldReturn('XI');
+    }
 }
