@@ -2,36 +2,25 @@
 
 class RomanNumeralsConverter
 {
+    protected static $lookup = [
+        50 => 'L',
+        10 => 'X',
+        9 => 'IX',
+        5 => 'V',
+        4 => 'IV',
+        1 => 'I'
+    ];
+
     public function convert($number)
     {
         $solution = '';
 
-        if ($number >= 50) {
-            $solution .= 'L';
-            $number -= 50;
+        foreach (static::$lookup as $limit => $glyph) {
+            while ($number >= $limit) {
+                $solution .= $glyph;
+                $number -= $limit;
+            }
         }
-
-        while ($number >= 10) {
-            $solution .= 'X';
-            $number -= 10;
-        }
-
-        if ($number >= 9) {
-            $solution .= 'IX';
-            $number -= 9;
-        }
-
-        if ($number >= 5) {
-            $solution .= 'V';
-            $number -= 5;
-        }
-
-        if ($number >= 4) {
-            $solution .= 'IV';
-            $number -= 4;
-        }
-
-        $solution .= str_repeat('I', $number);
 
         return $solution;
     }
