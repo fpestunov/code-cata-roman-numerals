@@ -32,7 +32,7 @@
 - создаем `composer.json`
 - `composer install`
 - создаем класс тестирования Боулинг `vendor/ bin/phpspec describe RomanNumeralsConverter`
-- запускаем тест `vendor/bin/phpspec run` и создаем класс приложения
+- запускаем тест `vendor/bin/phpspec run -fpretty` и создаем класс приложения
 
 ## Приступаем к разработке
 

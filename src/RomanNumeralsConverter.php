@@ -4,10 +4,15 @@ class RomanNumeralsConverter
 {
     public function convert($number)
     {
-        if ($number === 5) {
-            return 'V';
+        $solution = '';
+
+        if ($number >= 5) {
+            $solution .= 'V';
+            $number -= 5;
         }
 
-        return str_repeat('I', $number);
+        $solution .= str_repeat('I', $number);
+
+        return $solution;
     }
 }

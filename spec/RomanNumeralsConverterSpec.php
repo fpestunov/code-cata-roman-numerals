@@ -22,4 +22,9 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
     {
         $this->convert(5)->shouldReturn('V');
     }
+
+    function it_calculates_the_roman_numeral_for_6()
+    {
+        $this->convert(6)->shouldReturn('VI');
+    }
 }
