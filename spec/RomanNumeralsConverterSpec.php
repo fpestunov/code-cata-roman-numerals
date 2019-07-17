@@ -18,6 +18,11 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
         $this->convert(2)->shouldReturn('II');
     }
 
+    function it_calculates_the_roman_numeral_for_4()
+    {
+        $this->convert(4)->shouldReturn('IV');
+    }
+
     function it_calculates_the_roman_numeral_for_5()
     {
         $this->convert(5)->shouldReturn('V');
@@ -26,6 +31,11 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
     function it_calculates_the_roman_numeral_for_6()
     {
         $this->convert(6)->shouldReturn('VI');
+    }
+
+    function it_calculates_the_roman_numeral_for_9()
+    {
+        $this->convert(9)->shouldReturn('IX');
     }
 
     function it_calculates_the_roman_numeral_for_10()
