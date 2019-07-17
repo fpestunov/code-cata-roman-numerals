@@ -6,7 +6,12 @@ class RomanNumeralsConverter
     {
         $solution = '';
 
-        if ($number >= 10) {
+        if ($number >= 50) {
+            $solution .= 'L';
+            $number -= 50;
+        }
+
+        while ($number >= 10) {
             $solution .= 'X';
             $number -= 10;
         }
