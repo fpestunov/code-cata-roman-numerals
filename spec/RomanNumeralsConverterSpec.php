@@ -57,4 +57,29 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
     {
         $this->convert(50)->shouldReturn('L');
     }
+
+    function it_calculates_the_roman_numeral_for_100()
+    {
+        $this->convert(100)->shouldReturn('C');
+    }
+
+    function it_calculates_the_roman_numeral_for_500()
+    {
+        $this->convert(500)->shouldReturn('D');
+    }
+
+    function it_calculates_the_roman_numeral_for_1000()
+    {
+        $this->convert(1000)->shouldReturn('M');
+    }
+
+    function it_calculates_the_roman_numeral_for_1999()
+    {
+        $this->convert(1999)->shouldReturn('MCMXCIX');
+    }
+
+    function it_calculates_the_roman_numeral_for_4990()
+    {
+        $this->convert(4990)->shouldReturn('MMMMCMXC');
+    }
 }
